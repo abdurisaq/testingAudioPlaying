@@ -2,8 +2,10 @@ package com.example.testing
 
 import androidx.media3.common.MediaItem
 import android.net.Uri
+import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.media3.common.Player
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -12,8 +14,8 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
-@HiltViewModel
-class MainViewModel @Inject constructor(
+
+class MainViewModel (
     private val savedStateHandle: SavedStateHandle,
     val player:Player,
     private val metaDataReader:  MetaDataReader
@@ -30,6 +32,7 @@ class MainViewModel @Inject constructor(
         )
     }}.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
     init {
+        Log.d("Scaffold", "Initializing player and preparing media")
         player.prepare()
     }
     fun addVideoUri(uri: Uri){
@@ -47,3 +50,4 @@ class MainViewModel @Inject constructor(
     }
 
 }
+

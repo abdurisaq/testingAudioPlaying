@@ -1,6 +1,8 @@
-package com.example.testing.navbar
+package com.example.testing.pages.navbar
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.QueueMusic
+import androidx.compose.material.icons.automirrored.outlined.QueueMusic
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -17,13 +19,13 @@ data class BottomNavigationItem(
 val items = listOf(
     BottomNavigationItem(
         title = "songs",
-        selectedIcon = Icons.Filled.Home,
-        unselectedIcon = Icons.Outlined.Home
+        selectedIcon = Icons.Filled.MusicNote,
+        unselectedIcon = Icons.Outlined.MusicNote
     ),
     BottomNavigationItem(
         title = "playlist",
-        selectedIcon = Icons.Filled.PlayArrow,
-        unselectedIcon = Icons.Outlined.PlayArrow
+        selectedIcon = Icons.AutoMirrored.Filled.QueueMusic,
+        unselectedIcon = Icons.AutoMirrored.Outlined.QueueMusic
     ),
     BottomNavigationItem(
         title = "search",

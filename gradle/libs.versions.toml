@@ -1,13 +1,11 @@
 [versions]
-agp = "8.3.0"
-hiltAndroid = "2.42"
-hiltAndroidCompiler = "2.44"
-hiltCompiler = "1.2.0"
+agp = "8.3.2"
+
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
-junitVersion = "1.1.5"
-espressoCore = "3.5.1"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.2"
 activityCompose = "1.9.0"
 composeBom = "2024.06.00"
@@ -18,19 +16,20 @@ composeNavigation = "2.8.0-beta04"
 serialization = "1.6.3"
 materialIconsExtended = "1.6.8"
 media3Common = "1.3.1"
-
+media3Ui = "1.3.1"
+media3Exoplayer = "1.3.1"
+hiltCompiler = "1.2.0"
 [libraries]
 
-androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hiltCompiler" }
+
+
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltCompiler" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleRuntimeKtx" }
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 
 
-aria2c = { module = "com.github.yausername.youtubedl-android:aria2c", version.ref = "aria" }
-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
-hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
-hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hiltAndroid" }
+#aria2c = { module = "com.github.yausername.youtubedl-android:aria2c", version.ref = "aria" }
+
 libraryv = { module = "com.github.yausername.youtubedl-android:library", version.ref = "library" }
 ffmpeg = { module = "com.github.yausername.youtubedl-android:ffmpeg", version.ref = "ffmpeg" }
 
@@ -51,6 +50,8 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "composeNavigation" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization"}
 androidx-media3-common = { group = "androidx.media3", name = "media3-common", version.ref = "media3Common" }
+androidx-media3-ui = { group = "androidx.media3", name = "media3-ui", version.ref = "media3Ui" }
+androidx-media3-exoplayer = { group = "androidx.media3", name = "media3-exoplayer", version.ref = "media3Exoplayer" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

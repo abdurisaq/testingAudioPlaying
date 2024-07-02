@@ -1,15 +1,16 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
+    id ("com.android.application")
+    id ("kotlin-android")
     alias(libs.plugins.kotlin.serialization)
-    id ("kotlin-kapt")
-    id ("kotlin-parcelize")
-    id ("dagger.hilt.android.plugin")
+    kotlin("kapt")
+
+
 }
 
 android {
     namespace = "com.example.testing"
     compileSdk = 34
+
 
     defaultConfig {
         applicationId = "com.example.testing"
@@ -51,6 +52,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -88,6 +90,8 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.media3.common)
+    implementation(libs.androidx.media3.ui)
+    implementation(libs.androidx.media3.exoplayer)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -97,11 +101,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
 
-    //dagger
 
-    implementation (libs.hilt.android)
-    kapt(libs.hilt.android.compiler)
-
-    kapt (libs.androidx.hilt.compiler)
     implementation (libs.androidx.hilt.navigation.compose)
 }
